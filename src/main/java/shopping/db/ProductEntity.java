@@ -10,7 +10,6 @@ public class ProductEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
-    private String productId;
     private String categoryId;
     private String productName;
     private String price;
@@ -26,14 +25,6 @@ public class ProductEntity {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public String getProductId() {
-        return productId;
-    }
-
-    public void setProductId(String productId) {
-        this.productId = productId;
     }
 
     public String getCategoryId() {

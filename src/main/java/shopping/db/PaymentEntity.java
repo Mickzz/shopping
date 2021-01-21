@@ -9,22 +9,23 @@ import javax.persistence.Id;
 public class PaymentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private String paymentId;
     private String shippingId;
-    private String firstName;
-    private String lastName;
+    private String username;
+    private String firstname;
+    private String lastname;
     private String tel;
     private String address;
 
     public PaymentEntity() {super();
     }
 
-    public String getId() {
-        return id;
+    public String getPaymentId() {
+        return paymentId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setPaymentId(String paymentId) {
+        this.paymentId = paymentId;
     }
 
     public String getShippingId() {
@@ -35,20 +36,28 @@ public class PaymentEntity {
         this.shippingId = shippingId;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
     public String getTel() {

@@ -5,12 +5,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.List;
-@Entity(name = "option")
+@Entity(name = "optionmenu")
 public class OptionMenuEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
-    private List<Object> optionMenuList;
+    private String optionmenuList;
 
     public OptionMenuEntity(){
         super();
@@ -24,11 +24,11 @@ public class OptionMenuEntity {
         this.id = id;
     }
 
-    public List<Object> getOptionMenuList() {
-        return optionMenuList;
+    public String getOptionmenuList() {
+        return optionmenuList;
     }
 
-    public void setOptionMenuList(List<Object> optionMenuList) {
-        this.optionMenuList = optionMenuList;
+    public void setOptionmenuList(String optionmenuList) {
+        this.optionmenuList = optionmenuList;
     }
 }

@@ -1,16 +1,15 @@
 package shopping.db;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import java.util.List;
+import javax.persistence.*;
+
 @Entity(name = "submenu")
 public class SubMenuEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
-    private List<String> subMenuList;
+    private String submenuList;
+    @OneToOne(mappedBy = "subMenu")
+    private MenuSubEntity menu;
 
     public SubMenuEntity(){
         super();
@@ -24,11 +23,19 @@ public class SubMenuEntity {
         this.id = id;
     }
 
-    public List<String> getSubMenuList() {
-        return subMenuList;
+    public String getSubmenuList() {
+        return submenuList;
     }
 
-    public void setSubMenuList(List<String> subMenuList) {
-        this.subMenuList = subMenuList;
+    public void setSubmenuList(String submenuList) {
+        this.submenuList = submenuList;
+    }
+
+    public MenuSubEntity getMenu() {
+        return menu;
+    }
+
+    public void setMenu(MenuSubEntity menu) {
+        this.menu = menu;
     }
 }

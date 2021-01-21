@@ -4,7 +4,7 @@ public class Menu {
     private String id;
     private String name;
     private SubMenu subMenu;
-    private OptionMenu optionMenu;
+    private OptionMenu optionmenu;
 
     public Menu(){
         super();
@@ -35,10 +35,10 @@ public class Menu {
     }
 
     public OptionMenu getOptionMenu() {
-        return optionMenu;
+        return optionmenu;
     }
 
     public void setOptionMenu(OptionMenu optionMenu) {
-        this.optionMenu = optionMenu;
+        this.optionmenu = optionMenu;
     }
 }

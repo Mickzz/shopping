@@ -4,7 +4,7 @@ import java.util.List;
 
 public class OptionMenu {
     private String id;
-    private List<Object> optionMenuList;
+    private List<Object> optionmenuList;
 
     public OptionMenu(){
         super();
@@ -19,10 +19,10 @@ public class OptionMenu {
     }
 
     public List<Object> getOptionMenuList() {
-        return optionMenuList;
+        return optionmenuList;
     }
 
     public void setOptionMenuList(List<Object> optionMenuList) {
-        this.optionMenuList = optionMenuList;
+        this.optionmenuList = optionMenuList;
     }
 }
